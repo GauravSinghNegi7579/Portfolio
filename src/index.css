@@ -1,0 +1,262 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: 'MyFont';
+    src: url('src/assets/MolexShoora-Bold.otf') format('opentype');
+    font-weight: normal;  
+    font-style: normal;   
+  }
+
+html {
+  scroll-behavior: smooth;
+}
+
+.text, .name, .project, .click , .about{
+    font-family: 'Myfont';
+  }
+
+.skills-container {
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.skills-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex: 1;
+}
+
+.skill-box {
+    position: relative;
+    flex: 1;
+    border: 2px solid #ddd;
+    border-radius: 15px;
+    padding: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f5f5;
+    cursor: pointer;
+    transition: color 0.7s ease;
+}
+
+.skill-box:hover {
+    color: white;
+}
+
+.icon {
+    width: 120px;
+    height: 120px;
+    z-index: 1;
+}
+
+.skill-title {
+    position: absolute;
+    bottom: 5px;
+    left: 25px;
+    font-size: 3vw;
+    font-weight: bold;
+    margin: 0;
+    z-index: 1;
+    transition: color 0.7s ease;
+}
+
+.skill-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -1000px;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    transition: left 0.7s ease;
+    z-index: 0;
+}
+
+.skill-box:hover::before {
+    left: 0;
+}
+ 
+.container {
+  padding: 20px;
+  background-color: lightblue;
+}
+
+@media (max-width: 768px) {
+       .NavWrapper{
+        padding-left:2% ;
+        padding-right:2% ;
+        height: 8%;
+       }
+
+       .portfolio{
+        font-size: 2.5vw;
+       }
+       .navElem{
+        font-size: 1.7vw;
+       }
+  
+       .textContainer{
+        padding-top: 20vw;
+       }
+
+       .backText{
+        font-size: 35vw;
+       }
+
+       .avtar{
+        height: 80%;
+       }
+
+       .infoHeading{
+        font-size: 2.3vw;
+       }
+
+       .info{
+        font-size: 1.7vw;
+       }
+
+      .skill-box{
+        padding: 2px;
+        justify-content: center;
+        align-items: center;
+      }
+
+
+       .icon{
+        width: 20vw;
+        height: 20vw;
+       }
+
+       .project-container{
+        height: 90vh;
+       }
+       .footPort{
+        font-size: 3vw;
+      } 
+      .proButton{
+         font-size: 2.5vw;
+       }
+       .propara{
+        font-size: 2vw;
+       }
+}
+
+@media (max-width: 480px) {
+
+  .NavWrapper{
+    padding-left:2% ;
+    padding-right:2% ;
+    height: 8%;
+   }
+
+   .portfolio{
+    font-size: 3.1vw;
+   }
+   .navElem{
+    font-size: 2.1vw;
+    display: none;
+   }
+
+   .menu{
+    display: block;
+    width: 4vw;
+    height: 4vw;
+   }
+
+   .textContainer{
+    padding-top: 20vw;
+   }
+
+   .backText{
+    font-size: 40vw;
+   }
+
+   .avtar{
+    height: 75%;
+   }
+
+   .about{
+     height: 50%;
+   }
+
+   .infoHeading{
+    font-size: 3.5vw;
+   }
+
+   .info{
+    font-size: 2.6vw;
+   }
+
+  .skill-box{
+    padding: 2px;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+   .icon{
+    width: 20vw;
+    height: 20vw;
+   }
+
+   .project-container{
+    height: 65vh;
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+   }
+   .footPort{
+    font-size:2.8vw;
+  } 
+  .proButton{
+     font-size: 2.8vw;
+   }
+   .propara{
+    font-size: 2.8vw;
+    display: none;
+   }
+  
+   .footer{
+    height: 60vh;
+   }
+
+   .nameCon{
+    height: 15%;
+   }
+
+   .name{
+    font-size: 9vw;
+   }
+
+   .footportcon{
+    height: 20%;
+    padding-right: 10vw;
+    padding-left: 10vw;
+   }
+
+   .procon{
+    height: 26%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+   }
+
+   .procontent{
+    justify-content: center;
+    align-items: center;
+   }
+
+   .skills-row{
+    flex-direction: column;
+   }
+}
+
+  
